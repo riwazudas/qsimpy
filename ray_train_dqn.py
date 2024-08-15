@@ -90,11 +90,12 @@ if __name__ == "__main__":
         run_config=air.RunConfig(
             stop=stop_config,
             # Save checkpoints every 10 iterations.
-            checkpoint_config=train.CheckpointConfig(checkpoint_frequency=10),
+            checkpoint_config=air.CheckpointConfig(checkpoint_frequency=10),
             storage_path=storage_path, 
             name="DQN_QCE_1000"
         ),
         param_space=config.to_dict(),
     ).fit()
 
+    
     ray.shutdown()
