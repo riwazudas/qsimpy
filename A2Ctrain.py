@@ -1,3 +1,5 @@
+### requires ray version 2.6.3 to run
+
 import ray
 from ray import tune, air
 from ray.tune.registry import register_env
